@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ryancheng.weatherdemo.injector.ActivityModule;
@@ -20,7 +22,8 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
     ProgressBar progressBar;
     @InjectView(R.id.detail)
     TextView detailView;
-    private DetailPresenter detailPresenter;
+    @Inject
+    DetailPresenter detailPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,6 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
                 .activityModule(new ActivityModule(this))
                 .appComponent(weatherApp.getAppComponent())
                 .build().inject(this);
-        detailPresenter = new DetailPresenter(weatherApp.getAppComponent().api());
     }
 
     @Override

@@ -13,7 +13,6 @@ import java.util.List;
 
 import dagger.Module;
 import dagger.Provides;
-import ryancheng.weatherdemo.API;
 import ryancheng.weatherdemo.model.City;
 
 @Module

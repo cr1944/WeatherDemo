@@ -17,6 +17,7 @@ public class DetailPresenter implements Presenter<DetailView> {
     private final API api;
     private DetailView detailView;
 
+    @Inject
     public DetailPresenter(API api) {
         this.api = api;
     }

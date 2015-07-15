@@ -16,8 +16,7 @@ import ryancheng.weatherdemo.MainActivity;
 import ryancheng.weatherdemo.model.City;
 
 @Activity
-@Component(dependencies = AppComponent.class,
-        modules = ActivityModule.class)
+@Component(dependencies = AppComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
     void inject(MainActivity activity);
     void inject(DetailActivity activity);
